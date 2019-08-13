@@ -3,6 +3,8 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import blogStyles from './blog.module.scss'
 
+import Head from '../components/head'
+
 //
 // Goal: Render contentful Posts
 //
@@ -35,6 +37,7 @@ export default function blog() {
 
     return (
         <Layout>
+            <Head title='Blog' />
         <h2>Blog</h2>
         <ol className={blogStyles.posts}>
             {data.allContentfulBlogPost.edges.map((edge) => {

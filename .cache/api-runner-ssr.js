@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('C:/Users/tyler/repo/gatsbypractice/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('C:/Users/tyler/repo/gatsbypractice/node_modules/gatsby-remark-images/gatsby-ssr'),
       options: {"plugins":[],"maxWidth":750,"linkImagesToOriginal":false},
     }]
