@@ -1,18 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Footer from '../components/footer'
-import Header from '../components/header'
+
+import Layout from '../components/layout'
 
 export default function contact() {
     return (
-        <div>
-            <Header />
-            <h1>Contact Page</h1>
-            <p>This will be how you can get in touch with me!</p>
-            <p>Home <Link to='/'>here</Link></p>
-            <p>About <Link to='/about'>here</Link></p>
-            <Footer />
-
-        </div>
+            <Layout>
+            <h2>Contact</h2>
+            <p>Heres where my contact info goes</p>
+            <Link to='/'>Home</Link>
+            </Layout>
     )
 }
