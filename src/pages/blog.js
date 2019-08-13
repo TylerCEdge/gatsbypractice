@@ -13,13 +13,19 @@ export default function blog() {
                             title
                             date
                         }
-                        html
-                        excerpt
+                        fields {
+                            slug
+                        }
                     }
                 }
             }
         }
     `)
+
+        // 1. Fetch the slug for posts
+        // 2. Use slug to generate a link to the post page
+        // 3. Test your work
+
     return (
         <Layout>
         <h2>Blog</h2>
@@ -27,7 +33,7 @@ export default function blog() {
             {data.allMarkdownRemark.edges.map((edge) => {
                 return (
                     <li>
-                        <h2>{edge.node.frontmatter.title}</h2>
+                        <h2><Link to={`/blog/${edge.node.fields.slug}`}>{edge.node.frontmatter.title}</Link></h2>
                         <p>{edge.node.frontmatter.date}</p>
                     </li>
                 )
